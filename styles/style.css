@@ -1,13 +1,12 @@
-body, div, section, nav, span{
+body, div, section, nav, span, button{
     margin: 0;
     padding: 0;
     font-family: 'Karantina', cursive;
     box-sizing: border-box;
 }
-.cabecera{
+.cabecera, .cabecera-section{
     position: relative;
     width: 100vw;
-    height: 200px;
     text-align: center;
 }
 .image{
@@ -16,7 +15,7 @@ body, div, section, nav, span{
     background: url('../resources/shoes3.jpeg');
     background-size: cover;
 }
-.title{
+.title, .section-title{
     position: absolute;
     color: white;
     top: 90px;
@@ -25,7 +24,7 @@ body, div, section, nav, span{
     height: 40px;
     width: 100vw;
 }
-.title-background{
+.title-background, .section-background{
     position: absolute;
     top: 90px;
     background: silver;
@@ -61,11 +60,6 @@ body, div, section, nav, span{
 .categories{
     margin: 30px 25px;
 }
-.category1, .category2, .category3{
-    display: flex;
-    height: 100px;
-    overflow: scroll;
-}
 .category3{
     margin-bottom: 100px;
 }
@@ -100,4 +94,80 @@ body, div, section, nav, span{
     right: 0;
     bottom: 0;
     font-size: 20px;
+}
+.category1, .category2, .category3{
+    height: 300px;
+    overflow: hidden;
+    transition-duration: 300ms;
+}
+.category1 img{
+    width: 50%;
+}
+
+/*--------imagenes de cabecera------------------ */
+.cabecera-section{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.section-background{
+    height:100px;
+}
+.button{
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    bottom: 25px;
+    margin: 0 auto;
+    outline: none;
+    border: none;
+    background: #05a081;
+    border-radius: 10px;
+    font-size: 30px;
+    text-align: left;
+    padding-left:20px;
+}
+.arrow-down{
+    width: 40px;
+    height: 40px;
+    background:url('../resources/arrow-down.svg');
+    background-size: cover;
+    position: absolute;
+    top: 5px;
+    left: 90px;
+    transform: rotate(180deg);
+}
+.section-imagen{
+
+    background: url('../resources/shoes2.jpeg');
+}
+.section-imagen2{
+    background: url('../resources/shoes4.jpeg');
+}
+.section-imagen3{
+    background: url('../resources/shoes5.jpeg');
+}
+.section-imagen2, .section-imagen, .section-imagen3{
+    height: 300px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+.product-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 400px;
+    overflow: scroll;
+}
+.product-container img{
+    width: 45%;
+    height: 30%;
+    margin: 2px;
+    border-radius: 10px;
+}
+
+/*clase mostrar contenido*/
+.mostrar{
+    height: auto;
 }
